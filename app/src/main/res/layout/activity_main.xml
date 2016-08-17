@@ -162,10 +162,10 @@
         android:layout_alignLeft="@+id/longitudeValue"
         android:text="@string/empty" />
 
-    <ImageView
+    <SurfaceView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView_arrow"
+        android:id="@+id/surfaceview_arrow"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

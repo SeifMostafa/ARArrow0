@@ -9,17 +9,17 @@ import android.hardware.SensorManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity{
-   //private Object3d object3d;
     SurfaceView cameraPreview;
     SurfaceHolder previewHolder;
+    GLSurfaceView glSurfaceView;
     Camera camera;
     boolean inPreview;
 
@@ -50,7 +50,7 @@ public class MainActivity extends Activity{
     TextView altitudeValue;
     TextView latitudeValue;
     TextView longitudeValue;
-    ImageView arrow;
+    SurfaceView arrow;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,8 +82,10 @@ public class MainActivity extends Activity{
         altitudeValue = (TextView) findViewById(R.id.altitudeValue);
         longitudeValue = (TextView) findViewById(R.id.longitudeValue);
         latitudeValue = (TextView) findViewById(R.id.latitudeValue);
-        arrow = (ImageView)findViewById(R.id.imageView_arrow);
-        arrow.setImageDrawable(getResources().getDrawable(R.drawable.arrow_down_1));
+        arrow = (SurfaceView)findViewById(R.id.surfaceview_arrow);
+       // arrow.draw(new Canvas().setMatrix(new Matrix().getValues(new )));
+
+
 
     }
 
